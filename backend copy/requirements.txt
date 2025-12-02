@@ -28,7 +28,6 @@ geopy==2.4.0
 
 # Database
 supabase==2.3.0
-postgrest==0.16.0
 
 # Development/Testing
 pytest==7.4.2
