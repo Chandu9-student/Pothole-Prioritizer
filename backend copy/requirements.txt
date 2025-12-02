@@ -19,7 +19,7 @@ Pillow>=10.3.0
 numpy>=1.26.0
 
 # Data Processing
-pandas==2.0.3
+pandas>=2.2.0
 
 # Utilities
 python-dotenv==1.0.0
