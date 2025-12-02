@@ -29,6 +29,7 @@ geopy==2.4.0
 # Database
 supabase==2.3.0
 httpx==0.24.1
+gotrue==2.4.2
 
 # Development/Testing
 pytest==7.4.2
