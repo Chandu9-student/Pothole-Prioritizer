@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<annotation>
+	<folder>images</folder>
+	<filename>img-553.jpg</filename>
+	<source>
+		<database>https://www.kaggle.com/datasets/chitholian/annotated-potholes-dataset</database>
+	</source>
+	<size>
+		<width>455</width>
+		<height>300</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>minor_pothole</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>220</xmin>
+			<ymin>93</ymin>
+			<xmax>252</xmax>
+			<ymax>103</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>major_pothole</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>65</xmin>
+			<ymin>130</ymin>
+			<xmax>253</xmax>
+			<ymax>231</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,39 @@
+# Flask Backend Requirements for Pothole Prioritizer
+
+# Web Framework
+Flask==3.0.0
+Flask-CORS==4.0.0
+Flask-Limiter==3.5.0
+
+# Authentication
+PyJWT==2.8.0
+
+# AI/ML Models
+ultralytics==8.0.196
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Image Processing
+opencv-python==4.8.1.78
+Pillow==10.0.1
+numpy==1.24.3
+
+# Data Processing
+pandas==2.0.3
+
+# Utilities
+python-dotenv==1.0.0
+requests==2.31.0
+geopy==2.4.0
+
+# Database
+supabase==2.3.0
+postgrest==0.16.0
+
+# Development/Testing
+pytest==7.4.2
+black==23.9.1
+flake8==6.1.0
+
+# Monitoring/Logging
+structlog==23.1.0

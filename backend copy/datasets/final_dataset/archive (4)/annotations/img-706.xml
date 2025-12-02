@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<annotation>
+<folder>images</folder>
+<filename>img-706.jpg</filename>
+<source>
+<image>https://www.facebook.com/photo/?fbid=10162793716615565</image><annotator>idanb</annotator></source>
+<size>
+<width>960</width>
+<height>540</height>
+<depth>3</depth>
+</size>
+<segmented>0</segmented>
+<object>
+<name>major_pothole</name>
+<pose>Unspecified</pose>
+<truncated>0</truncated>
+<difficult>0</difficult>
+<bndbox>
+<xmin>308</xmin>
+<ymin>192</ymin>
+<xmax>601</xmax>
+<ymax>391</ymax>
+</bndbox>
+</object>
+</annotation>

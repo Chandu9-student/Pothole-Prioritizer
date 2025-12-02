@@ -1,0 +1,91 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Environment Variables
+.env
+.env.local
+.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# React Build
+pothole-prioritizer/frontend/build/
+pothole-prioritizer/frontend/dist/
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model weights (optional - keep best.pt and yolov8n.pt)
+# Comment out if you want to include trained models
+# *.pt
+
+# Cache files
+*.cache
+.cache/
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Uploaded files (stored in Supabase)
+uploads/
+manual_reports/
+
+# Shell scripts (keep only essential ones)
+cleanup_for_deployment.sh

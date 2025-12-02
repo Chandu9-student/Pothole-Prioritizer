@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<annotation>
+<folder>images</folder>
+<filename>img-679.jpg</filename>
+<source>
+<image>https://www.bhol.co.il/news/138979</image><annotator>idanb</annotator></source>
+<size>
+<width>2554</width>
+<height>1916</height>
+<depth>3</depth>
+</size>
+<segmented>0</segmented>
+<object>
+<name>major_pothole</name>
+<pose>Unspecified</pose>
+<truncated>0</truncated>
+<difficult>0</difficult>
+<bndbox>
+<xmin>558</xmin>
+<ymin>912</ymin>
+<xmax>1722</xmax>
+<ymax>1534</ymax>
+</bndbox>
+</object>
+</annotation>

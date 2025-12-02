@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<annotation>
+<folder>images</folder>
+<filename>img-700.jpg</filename>
+<source>
+<image>https://newshaifakrayot.net/?p=247327</image><annotator>idanb</annotator></source>
+<size>
+<width>768</width>
+<height>622</height>
+<depth>3</depth>
+</size>
+<segmented>0</segmented>
+<object>
+<name>medium_pothole</name>
+<pose>Unspecified</pose>
+<truncated>0</truncated>
+<difficult>0</difficult>
+<bndbox>
+<xmin>461</xmin>
+<ymin>369</ymin>
+<xmax>502</xmax>
+<ymax>396</ymax>
+</bndbox>
+</object>
+</annotation>

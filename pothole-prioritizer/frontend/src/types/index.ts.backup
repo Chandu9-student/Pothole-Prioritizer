@@ -1,0 +1,43 @@
+export interface DetectionResult {
+  detections: Detection[];
+  processing_time: number;
+  annotated_image?: string;
+}
+
+export interface Detection {
+  confidence: number;
+  severity: 'critical' | 'high' | 'medium' | 'low';
+  bbox: [number, number, number, number];
+}
+
+export interface Pothole {
+  id: number;
+  latitude: number;
+  longitude: number;
+  severity: 'critical' | 'high' | 'medium' | 'low';
+  description: string;
+  reporter_name: string;
+  created_at: string;
+  status: 'reported' | 'under_review' | 'in_progress' | 'completed';
+  image_url?: string;
+}
+
+export interface PotholeReport {
+  latitude: number;
+  longitude: number;
+  severity: 'critical' | 'high' | 'medium' | 'low';
+  description: string;
+  reporter_name: string;
+  image?: File;
+}
+
+export interface ApiResponse<T> {
+  success: boolean;
+  message: string;
+  data?: T;
+}
+
+export interface PotholeReportResponse {
+  pothole: Pothole;
+  message: string;
+}

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<annotation>
+<folder>images</folder>
+<filename>img-691.jpg</filename>
+<source>
+<image>https://haipo.co.il/item/243740</image><annotator>idanb</annotator></source>
+<size>
+<width>368</width>
+<height>491</height>
+<depth>3</depth>
+</size>
+<segmented>0</segmented>
+<object>
+<name>major_pothole</name>
+<pose>Unspecified</pose>
+<truncated>0</truncated>
+<difficult>0</difficult>
+<bndbox>
+<xmin>78</xmin>
+<ymin>100</ymin>
+<xmax>260</xmax>
+<ymax>222</ymax>
+</bndbox>
+</object>
+</annotation>

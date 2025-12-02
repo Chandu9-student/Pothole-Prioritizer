@@ -1,0 +1,6 @@
+
+train: /Users/khaleedpatan/Documents/CAPSTONE 2/backend copy/datasets/final_dataset/train/images
+val: /Users/khaleedpatan/Documents/CAPSTONE 2/backend copy/datasets/final_dataset/val/images
+test: /Users/khaleedpatan/Documents/CAPSTONE 2/backend copy/datasets/final_dataset/test/images
+nc: 2
+names: ['pothole', 'other']

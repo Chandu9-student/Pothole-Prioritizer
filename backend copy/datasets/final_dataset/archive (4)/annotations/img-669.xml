@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<annotation>
+	<folder>images</folder>
+	<filename>img-669.jpg</filename>
+	<source>
+		<image>https://www.ynet.co.il/articles/0,7340,L-4183997,00.html</image><annotator>idanb</annotator></source>
+	<size>
+		<width>408</width>
+		<height>306</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>major_pothole</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>264</xmin>
+			<ymin>96</ymin>
+			<xmax>351</xmax>
+			<ymax>159</ymax>
+		</bndbox>
+	</object>
+</annotation>

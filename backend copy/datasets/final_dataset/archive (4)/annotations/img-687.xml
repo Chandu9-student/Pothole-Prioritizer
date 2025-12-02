@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<annotation>
+<folder>images</folder>
+<filename>img-687.jpg</filename>
+<source>
+<image>GoogleMaps</image><annotator>idanb</annotator></source>
+<size>
+<width>724</width>
+<height>359</height>
+<depth>3</depth>
+</size>
+<segmented>0</segmented>
+<object>
+<name>medium_pothole</name>
+<pose>Unspecified</pose>
+<truncated>0</truncated>
+<difficult>0</difficult>
+<bndbox>
+<xmin>463</xmin>
+<ymin>195</ymin>
+<xmax>616</xmax>
+<ymax>346</ymax>
+</bndbox>
+</object>
+</annotation>

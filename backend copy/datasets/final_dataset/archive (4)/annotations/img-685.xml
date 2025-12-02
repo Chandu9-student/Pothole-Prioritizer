@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<annotation>
+<folder>images</folder>
+<filename>img-685.jpg</filename>
+<source>
+<image>https://www.ashdod-haredim.co.il/%D7%A1%D7%95%D7%91%D7%9C%D7%99%D7%9D-%D7%9E%D7%94%D7%91%D7%95%D7%A8%D7%95%D7%AA-%D7%A9%D7%A0%D7%A4%D7%A2%D7%A8%D7%95-%D7%91%D7%9B%D7%91%D7%99%D7%A9%D7%99%D7%9D-%D7%9B%D7%9A-%D7%9E%D7%AA%D7%9B%D7%A0/</image><annotator>idanb</annotator></source>
+<size>
+<width>327</width>
+<height>523</height>
+<depth>3</depth>
+</size>
+<segmented>0</segmented>
+<object>
+<name>major_pothole</name>
+<pose>Unspecified</pose>
+<truncated>0</truncated>
+<difficult>0</difficult>
+<bndbox>
+<xmin>104</xmin>
+<ymin>174</ymin>
+<xmax>281</xmax>
+<ymax>291</ymax>
+</bndbox>
+</object>
+</annotation>

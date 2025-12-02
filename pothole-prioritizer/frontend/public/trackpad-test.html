@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacBook Trackpad Scroll Test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .section {
+            min-height: 100vh;
+            padding: 40px 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .section-1 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+        .section-2 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; }
+        .section-3 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; }
+        .section-4 { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color: white; }
+        .section-5 { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; }
+        
+        h1 { font-size: 3rem; margin-bottom: 20px; }
+        h2 { font-size: 2rem; margin-bottom: 15px; }
+        p { font-size: 1.2rem; margin-bottom: 10px; }
+        
+        .scroll-info {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-family: monospace;
+            z-index: 1000;
+        }
+        
+        .test-button {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .test-button:hover {
+            background: #ff5252;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-info" id="scrollInfo">
+        Scroll Position: <span id="scrollPos">0</span>px<br>
+        Page Height: <span id="pageHeight">0</span>px<br>
+        Trackpad Status: <span id="trackpadStatus">Waiting...</span>
+    </div>
+
+    <div class="container">
+        <div class="section section-1">
+            <h1>🖱️ MacBook Trackpad Test</h1>
+            <p>This is a simple test to verify your MacBook trackpad scrolling works</p>
+            <button class="test-button" onclick="scrollToSection(2)">Test Scroll Down</button>
+            <button class="test-button" onclick="scrollToSection(1)">Back to Top</button>
+        </div>
+
+        <div class="section section-2">
+            <h2>Section 2 - Pink</h2>
+            <p>If you can see this section, scrolling is working!</p>
+            <p>Try using your MacBook trackpad with two fingers to scroll up and down</p>
+            <button class="test-button" onclick="scrollToSection(3)">Next Section</button>
+        </div>
+
+        <div class="section section-3">
+            <h2>Section 3 - Blue</h2>
+            <p>Great! You've scrolled to the third section</p>
+            <p>Your MacBook trackpad is functioning correctly</p>
+            <button class="test-button" onclick="scrollToSection(4)">Continue</button>
+        </div>
+
+        <div class="section section-4">
+            <h2>Section 4 - Green</h2>
+            <p>Excellent! Trackpad scrolling is working perfectly</p>
+            <p>Now let's test the final section</p>
+            <button class="test-button" onclick="scrollToSection(5)">Final Test</button>
+        </div>
+
+        <div class="section section-5">
+            <h2>🎉 Success!</h2>
+            <p>Your MacBook trackpad scrolling is working correctly!</p>
+            <p>If you reached this section by scrolling, the issue is not with your trackpad</p>
+            <button class="test-button" onclick="scrollToSection(1)">Back to Top</button>
+        </div>
+    </div>
+
+    <script>
+        let scrollCount = 0;
+        
+        function updateScrollInfo() {
+            document.getElementById('scrollPos').textContent = Math.round(window.scrollY);
+            document.getElementById('pageHeight').textContent = document.body.scrollHeight;
+        }
+        
+        function scrollToSection(section) {
+            const sections = document.querySelectorAll('.section');
+            if (sections[section - 1]) {
+                sections[section - 1].scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                });
+            }
+        }
+        
+        // Listen for scroll events
+        window.addEventListener('scroll', function() {
+            scrollCount++;
+            updateScrollInfo();
+            document.getElementById('trackpadStatus').textContent = `Active (${scrollCount} events)`;
+            document.getElementById('trackpadStatus').style.color = '#4CAF50';
+        });
+        
+        // Listen for wheel events (trackpad)
+        window.addEventListener('wheel', function(e) {
+            console.log('🖱️ Trackpad wheel event detected:', e.deltaY);
+        }, { passive: true });
+        
+        // Update info on load
+        window.addEventListener('load', updateScrollInfo);
+        window.addEventListener('resize', updateScrollInfo);
+        
+        // Test if page is scrollable
+        setTimeout(() => {
+            const canScroll = document.body.scrollHeight > window.innerHeight;
+            console.log('Can scroll:', canScroll);
+            console.log('Page height:', document.body.scrollHeight);
+            console.log('Viewport height:', window.innerHeight);
+            
+            if (!canScroll) {
+                document.getElementById('trackpadStatus').textContent = 'Page not scrollable!';
+                document.getElementById('trackpadStatus').style.color = '#ff6b6b';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

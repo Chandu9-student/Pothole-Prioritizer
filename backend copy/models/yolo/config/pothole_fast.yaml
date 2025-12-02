@@ -1,0 +1,9 @@
+names:
+- minor_pothole
+- major_pothole
+- severe_pothole
+nc: 3
+path: /Users/khaleedpatan/Documents/CAPSTONE/backend/datasets/final_dataset
+test: test/images
+train: train/images
+val: val/images

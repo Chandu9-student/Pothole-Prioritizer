@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<annotation>
+<folder>images</folder>
+<filename>img-712.jpg</filename>
+<source>
+<image>idanb</image><annotator>idanb</annotator></source>
+<size>
+<width>1200</width>
+<height>1600</height>
+<depth>3</depth>
+</size>
+<segmented>0</segmented>
+<object>
+<name>medium_pothole</name>
+<pose>Unspecified</pose>
+<truncated>0</truncated>
+<difficult>0</difficult>
+<bndbox>
+<xmin>340</xmin>
+<ymin>667</ymin>
+<xmax>765</xmax>
+<ymax>805</ymax>
+</bndbox>
+</object>
+</annotation>

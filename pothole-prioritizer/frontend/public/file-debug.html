@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Input Debug</title>
+</head>
+<body style="font-family: Arial; padding: 50px;">
+    <h1>🔍 File Input Debug</h1>
+    
+    <h2>Test 1: Basic File Input</h2>
+    <input type="file" id="test1" accept="image/*" onchange="fileSelected1(this)">
+    <div id="result1" style="margin: 10px 0; padding: 10px; background: #f0f0f0;"></div>
+    
+    <h2>Test 2: Form File Input</h2>
+    <form>
+        <input type="file" id="test2" accept="image/*" onchange="fileSelected2(this)">
+    </form>
+    <div id="result2" style="margin: 10px 0; padding: 10px; background: #f0f0f0;"></div>
+    
+    <h2>Test 3: Label + File Input</h2>
+    <label for="test3" style="cursor: pointer; padding: 10px; background: blue; color: white;">
+        Click to Select File
+        <input type="file" id="test3" accept="image/*" onchange="fileSelected3(this)" style="display: none;">
+    </label>
+    <div id="result3" style="margin: 10px 0; padding: 10px; background: #f0f0f0;"></div>
+    
+    <h2>Debug Info</h2>
+    <div id="debug" style="margin: 10px 0; padding: 10px; background: #e0e0e0; font-family: monospace;"></div>
+
+    <script>
+        // Debug browser info
+        document.getElementById('debug').innerHTML = `
+            Browser: ${navigator.userAgent}<br>
+            File API Support: ${window.File ? 'Yes' : 'No'}<br>
+            FileReader Support: ${window.FileReader ? 'Yes' : 'No'}<br>
+            FormData Support: ${window.FormData ? 'Yes' : 'No'}<br>
+            Current URL: ${window.location.href}<br>
+            Current Time: ${new Date().toLocaleString()}
+        `;
+
+        function fileSelected1(input) {
+            console.log('Test 1 - File selected:', input.files[0]);
+            const result = document.getElementById('result1');
+            if (input.files[0]) {
+                result.innerHTML = `✅ SUCCESS: ${input.files[0].name} (${input.files[0].size} bytes)`;
+                result.style.background = '#d4edda';
+            } else {
+                result.innerHTML = '❌ No file selected';
+                result.style.background = '#f8d7da';
+            }
+        }
+
+        function fileSelected2(input) {
+            console.log('Test 2 - File selected:', input.files[0]);
+            const result = document.getElementById('result2');
+            if (input.files[0]) {
+                result.innerHTML = `✅ SUCCESS: ${input.files[0].name} (${input.files[0].size} bytes)`;
+                result.style.background = '#d4edda';
+            } else {
+                result.innerHTML = '❌ No file selected';
+                result.style.background = '#f8d7da';
+            }
+        }
+
+        function fileSelected3(input) {
+            console.log('Test 3 - File selected:', input.files[0]);
+            const result = document.getElementById('result3');
+            if (input.files[0]) {
+                result.innerHTML = `✅ SUCCESS: ${input.files[0].name} (${input.files[0].size} bytes)`;
+                result.style.background = '#d4edda';
+            } else {
+                result.innerHTML = '❌ No file selected';
+                result.style.background = '#f8d7da';
+            }
+        }
+
+        // Test programmatic trigger
+        setTimeout(() => {
+            console.log('Page loaded, testing file inputs...');
+            console.log('Test 1 input element:', document.getElementById('test1'));
+            console.log('Test 2 input element:', document.getElementById('test2'));
+            console.log('Test 3 input element:', document.getElementById('test3'));
+        }, 1000);
+    </script>
+</body>
+</html>
