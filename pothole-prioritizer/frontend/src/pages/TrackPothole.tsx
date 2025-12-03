@@ -41,7 +41,7 @@ const TrackPothole: React.FC = () => {
     setTrackingInfo(null);
 
     try {
-      const response = await fetch(`http://localhost:5002/api/track/${referenceNumber.trim()}`);
+      const response = await fetch(getApiUrl(`api/track/${referenceNumber.trim()}`));
       const data = await response.json();
 
       if (response.ok && data.status === 'success') {

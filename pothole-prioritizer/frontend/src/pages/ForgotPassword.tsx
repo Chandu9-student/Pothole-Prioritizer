@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 import Card from '../components/Card';
 import Button from '../components/Button';
+import { getApiUrl } from '../config/api';
 
 const ForgotPassword: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -20,8 +21,7 @@ const ForgotPassword: React.FC = () => {
     setIsLoading(true);
     
     try {
-      // TODO: Implement actual password reset API call
-      const response = await fetch('http://localhost:5002/api/auth/forgot-password', {
+      const response = await fetch(getApiUrl('api/auth/forgot-password'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

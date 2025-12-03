@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { DetectionResult, Pothole } from '../types/index';
+import { API_BASE_URL } from '../config/api';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5002';
+// API_BASE_URL is now imported from centralized config
 
 const api = axios.create({
   baseURL: API_BASE_URL,

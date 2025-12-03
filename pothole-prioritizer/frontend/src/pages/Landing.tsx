@@ -30,7 +30,7 @@ const Landing: React.FC = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const response = await fetch('http://localhost:5002/api/public-stats');
+        const response = await fetch(getApiUrl('api/public-stats'));
         if (response.ok) {
           const data = await response.json();
           setStats(data.stats);

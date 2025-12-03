@@ -18,11 +18,15 @@ def create_app():
     # Store limiter in app config for access in routes
     app.limiter = limiter
     
-    # Configure CORS - restrict in production
-    # TODO: Update origins for production domain
+    # Configure CORS
+    allowed_origins = [
+        "http://localhost:3000", "http://localhost:3001", "http://localhost:3002",
+        "http://127.0.0.1:3000", "http://127.0.0.1:3001",
+        "https://pothole-prioritizer-frontend.onrender.com"
+    ]
     CORS(app, resources={
         r"/*": {
-            "origins": ["http://localhost:3000", "http://localhost:3001", "http://localhost:3002", "http://localhost:3003", "http://localhost:3004", "http://localhost:3005", "http://localhost:3006", "http://localhost:3007", "http://localhost:3008", "http://localhost:3009", "http://127.0.0.1:3000", "http://127.0.0.1:3001", "http://127.0.0.1:3002", "http://127.0.0.1:3003", "http://127.0.0.1:3004", "http://127.0.0.1:3005", "http://127.0.0.1:3006", "http://127.0.0.1:3007", "http://127.0.0.1:3008", "http://127.0.0.1:3009"],
+            "origins": allowed_origins,
             "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
             "allow_headers": ["Content-Type", "Authorization"],
             "supports_credentials": True
