@@ -13,17 +13,28 @@ _model = None
 def get_model():
     global _model
     if _model is None:
-        # Use new model weights and reference metrics
-        # Correct path: workspace root + 'backend copy/best.pt'
-        model_path = "/Users/khaleedpatan/Documents/CAPSTONE 2/backend copy/best.pt"
-        print(f"Resolved previous weights path: {model_path}")
+        # Use relative path that works both locally and on Render
+        # Get the directory where this file is located
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        # Go up two levels to reach 'backend copy' directory
+        backend_dir = os.path.dirname(os.path.dirname(current_dir))
+        model_path = os.path.join(backend_dir, 'best.pt')
+        
+        print(f"Looking for model at: {model_path}")
+        
         if os.path.exists(model_path):
-            print(f"Loading previous model weights from {model_path}")
+            print(f"Loading model weights from {model_path}")
             _model = YOLO(model_path)
             print(f"Loaded model classes: {_model.names}")
         else:
-            print("Previous weights not found at resolved path, using default YOLOv8n model")
-            _model = YOLO('yolov8n.pt')
+            print(f"Model not found at {model_path}, trying yolov8n.pt in same directory")
+            fallback_path = os.path.join(backend_dir, 'yolov8n.pt')
+            if os.path.exists(fallback_path):
+                print(f"Loading fallback model from {fallback_path}")
+                _model = YOLO(fallback_path)
+            else:
+                print("No local models found, using default YOLOv8n")
+                _model = YOLO('yolov8n.pt')
     return _model
 
 def detect_potholes(image):
